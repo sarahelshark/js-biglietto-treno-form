@@ -23,9 +23,9 @@ TOOLS:
 */
 
 //prendo dato dei km e racchiudo in costante
-let Passengerkm = document.getElementById("number");
+let Passengerkm = document.getElementById("number").value;
 //prendo dato dell'età e racchiudo in costante
-let PassengerAge = document.getElementById("age");
+let PassengerAge = document.getElementById("age").value;
 //stampo i 2 dati in console
 console.log(Passengerkm);
 console.log(PassengerAge);
@@ -33,6 +33,7 @@ console.log(PassengerAge);
 //confronto km utente con km del servizio per un prezzo iniziale (non tiene ancora conto della eta) e salvo in una variabile il risultato effettivo
 let price = Math.round(Passengerkm * .21);
 console.log(price);
+
 
 //confronto età utente con condizionale per capire quale sconto applicare (se lo sconto si applica)
 // (se < 18 ottiene -20% se >65 ottiene -40%)
