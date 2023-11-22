@@ -24,6 +24,7 @@ TOOLS:
 
 //prendo dato dei km e racchiudo in costante
 let Passengerkm = document.getElementById("number").value;
+
 //prendo dato dell'età e racchiudo in costante
 let PassengerAge = document.getElementById("age").value;
 //stampo i 2 dati in console
@@ -50,3 +51,13 @@ if (PassengerAge < 18) {
 
 const PrezzoUtente = Math.round(PrezzoFinale);
 console.log(PrezzoUtente);
+
+//event listener al click del pulsante submit, ricevo i dati compilati
+ 
+function getVal() {
+    let val_age = document.getElementById("age").value;
+    console.log(val_age);
+    let val_number = document.getElementById("number").value;
+    console.log(val_number);
+
+  }
