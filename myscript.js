@@ -53,6 +53,7 @@ const PrezzoUtente = Math.round(PrezzoFinale);
 console.log(PrezzoUtente);
 
 //event listener al click del pulsante submit, ricevo i dati compilati
+//tentativo funzione trovata online
  
 function getVal() {
     let val_age = document.getElementById("age").value;
