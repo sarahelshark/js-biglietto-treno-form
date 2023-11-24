@@ -21,19 +21,33 @@ TOOLS:
 -condizionali che si sviluppano a partire dai dati acquisiti
 -risultato riportato in console
 */
-
 //prendo dato dei km e racchiudo in costante
-let Passengerkm = document.getElementById("number").value;
+let distance = document.getElementById("number").value;
 
 //prendo dato dell'età e racchiudo in costante
-let PassengerAge = document.getElementById("age").value;
-//stampo i 2 dati in console
-console.log(Passengerkm);
-console.log(PassengerAge);
+let age = document.getElementById("age").value;
 
-//confronto km utente con km del servizio per un prezzo iniziale (non tiene ancora conto della eta) e salvo in una variabile il risultato effettivo
-let price = Math.round(Passengerkm * .21);
-console.log(price);
+//prendo form e racchiudo in costante
+let form = document.getElementById("form");
+
+//stampo i dati in console
+console.log(distance);
+console.log(age);
+console.log(form);
+
+//event listener
+form.addEventListener('submit',function(event){
+    event.preventDefault(); //prevents from autosubmitting
+
+    let distance = document.getElementById("number").value; //prendo dato km inserito da utente
+    console.log(distance);
+
+    let age = document.getElementById("age").value; // prendo dato eta inserito da utente
+    console.log(age);
+
+    //confronto km utente con km del servizio per un prezzo iniziale (non tiene ancora conto della eta) e salvo in una variabile il risultato effettivo
+    let price = Math.floor(distance * .21);
+    console.log(price);
 
 
 //confronto età utente con condizionale per capire quale sconto applicare (se lo sconto si applica)
@@ -41,24 +55,14 @@ console.log(price);
 
 let PrezzoFinale;  //dichiarazione variabile finale
 
-if (PassengerAge < 18) {
+if (age < 18) {
     PrezzoFinale = price - (price * .2);  //semplifico calcolo percentuale facendo 20 / 100 = .2
-} else if (PassengerAge > 65) {
+} else if (age > 65) {
     PrezzoFinale = price - (price * .4);
 } else {
     PrezzoFinale = price;
 }
 
-const PrezzoUtente = Math.round(PrezzoFinale);
-console.log(PrezzoUtente);
+document.querySelector('.card.rounded-0').innerHTML = ` il tuo biglietto per percorrere ${distance} km è di ${PrezzoFinale} dobloni `;
+}); 
 
-//event listener al click del pulsante submit, ricevo i dati compilati
-//tentativo funzione trovata online
- 
-function getVal() {
-    let val_age = document.getElementById("age").value;
-    console.log(val_age);
-    let val_number = document.getElementById("number").value;
-    console.log(val_number);
-
-  }
