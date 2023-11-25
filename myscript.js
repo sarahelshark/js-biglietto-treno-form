@@ -45,8 +45,8 @@ form.addEventListener('submit',function(event){
     let age = document.getElementById("age").value; // prendo dato eta inserito da utente
     console.log(age);
 
-    //confronto km utente con km del servizio per un prezzo iniziale (non tiene ancora conto della eta) e salvo in una variabile il risultato effettivo
-    let price = Math.floor(distance * .21);
+//confronto km utente con km del servizio per un prezzo iniziale (non tiene ancora conto della eta) e salvo in una variabile il risultato effettivo
+    let price = Math.floor(distance * .21).toFixed(2);
     console.log(price);
 
 
