@@ -21,7 +21,8 @@ TOOLS:
 -condizionali che si sviluppano a partire dai dati acquisiti
 -risultato riportato in console
 */
-//prendo dato dei km e racchiudo in costante
+/**
+ * //prendo dato dei km e racchiudo in costante
 let distance = document.getElementById("number").value;
 
 //prendo dato dell'età e racchiudo in costante
@@ -34,6 +35,9 @@ let form = document.getElementById("form");
 console.log(distance);
 console.log(age);
 console.log(form);
+ * 
+ */
+
 
 //event listener
 form.addEventListener('submit',function(event){
